@@ -8,14 +8,17 @@ namespace RobotsVsDinosaurs
 {
     class Herd
     {
-        public Dinosaur dinosaur;
+        public int herdSize;
+
         public Herd()
         {
-            //Herd [] Dinsosaur = new Herd[3];
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    Dinosaur[i] = new Herd();
-            //}
+            herdSize = 3;
+            CreateDinosaurList();
+        }
+
+        public void CreateDinosaurList()
+        {
+            List<Dinosaur> dinosaur = Enumerable.Repeat(new Dinosaur(), herdSize).ToList();
         }
     }
 }

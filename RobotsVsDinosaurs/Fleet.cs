@@ -8,14 +8,16 @@ namespace RobotsVsDinosaurs
 {
     class Fleet
     {
-        public Robot robot;
+        public int fleetSize;
         public Fleet()
         {
-            //Fleet [] Robot = new Fleet[3];
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    Robot[i] = new Fleet();
-            //}
+            fleetSize = 3;
+            CreateRobotList();
+        }
+
+        public void CreateRobotList()
+        {
+            List<Robot> robot = Enumerable.Repeat(new Robot(), fleetSize).ToList();
         }
 
     }

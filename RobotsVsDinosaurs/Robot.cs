@@ -16,10 +16,13 @@ namespace RobotsVsDinosaurs
         public Robot()
         {
             weapon = new Weapon();
-            NameSelection();
+            RobotNameSelection();
+            RobotAttack();
+            RobotHealth();
+            RobotPowerLevel();
         }
 
-        public void NameSelection()
+        public void RobotNameSelection()
         {
             //switch ()
             //{
@@ -32,6 +35,18 @@ namespace RobotsVsDinosaurs
             //    default:
             //        break;
             //}
+        }
+        public void RobotAttack()
+        {
+
+        }
+        public void RobotHealth()
+        {
+
+        }
+        public void RobotPowerLevel()
+        {
+
         }
     }
 }
