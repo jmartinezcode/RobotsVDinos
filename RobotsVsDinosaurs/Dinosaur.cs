@@ -16,9 +16,22 @@ namespace RobotsVsDinosaurs
         public Dinosaur()
         {
             CreateDinosaurType();
+            CreateDinosaurHealth();
         }
 
         public void CreateDinosaurType()
+        {
+
+        }
+        public void CreateDinosaurHealth()
+        {
+            double health = 100;
+        }
+        public void CreateDinsoaurEnergy()
+        {
+
+        }
+        public void CreateDinosaurAP()
         {
 
         }
