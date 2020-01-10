@@ -8,36 +8,21 @@ namespace RobotsVsDinosaurs
 {
     class Robot
     {
-        string name;
-        double health;
-        double powerlevel;
-        Weapon weapon;
-
-        public Robot()
+        public string name;
+        public double health;
+        public double powerLevel;
+        public Weapon weapon;
+        Random rand;
+        
+        public Robot(string name, double powerLevel)
         {
-            weapon = new Weapon();
-            RobotNameSelection();
-            RobotAttack();
-            RobotHealth();
-            RobotPowerLevel();
+            health = 100;
+            this.powerLevel = powerLevel;
+            rand = rand;
+            weapon = new Weapon(rand);
+            //RobotAttack();
         }
 
-        public void RobotNameSelection()
-        {
-            
-
-        }
-        public void RobotAttack()
-        {
-
-        }
-        public void RobotHealth()
-        {
-
-        }
-        public void RobotPowerLevel()
-        {
-
-        }
+        
     }
 }

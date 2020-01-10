@@ -8,32 +8,34 @@ namespace RobotsVsDinosaurs
 {
     class Dinosaur
     {
-        string type;
-        double health;
-        double energy;
-        double attackPower;
+        public string type;
+        public double health;
+        public double energy;
+        public double attackPower;
 
         public Dinosaur()
         {
             CreateDinosaurType();
             CreateDinosaurHealth();
+            CreateDinsoaurEnergy();
+            CreateDinosaurAP();
         }
 
         public void CreateDinosaurType()
         {
-
+            type = "melee";
         }
         public void CreateDinosaurHealth()
         {
-            double health = 100;
+            health = 100;
         }
         public void CreateDinsoaurEnergy()
         {
-
+            energy = 100;
         }
         public void CreateDinosaurAP()
         {
-
+            attackPower = 100;
         }
 
     }
