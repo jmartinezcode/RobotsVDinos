@@ -34,7 +34,7 @@ namespace RobotsVsDinosaurs
                     // if hit, minus health in the amount of opponents attack power
             // we need to check if a team won, if not grab next to and battle
         }
-        
+
         public void ChooseSide()
         {
             Console.WriteLine("Choose Your Side (enter 1 or 2):\n1 Robots\n2 Dinosaurs");
@@ -51,6 +51,18 @@ namespace RobotsVsDinosaurs
                     Console.WriteLine("Please Choose 1 or 2");
                     break;
             }
+        }
+
+
+        public void DisplayRobots()
+        {
+            Console.WriteLine("The Robot Fleet consists of:");
+
+        }
+
+        public void DisplayDinosaurs()
+        {
+            Console.WriteLine("The Dinsoaur Herd consists of:");
         }
     }
 }
