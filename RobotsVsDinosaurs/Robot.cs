@@ -13,13 +13,15 @@ namespace RobotsVsDinosaurs
         public double powerLevel;
         public Weapon weapon;
         Random rand;
-        
+
         public Robot(string name, double powerLevel)
         {
             health = 100;
             this.powerLevel = powerLevel;
-            rand = rand;
-            weapon = new Weapon(rand);
+
+            // Create random weapon at 
+            List<string> weaponTypeList = new List<string>() { "Blaster", "Cannon", "Blade", "Rifle", "Ray", "Laser", "Gun", "Sword" };
+            weapon = new Weapon(weaponTypeList[rand.Next(weaponTypeList.Count)]);
             //RobotAttack();
         }
 
