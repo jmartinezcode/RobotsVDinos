@@ -8,7 +8,7 @@ namespace RobotsVsDinosaurs
 {
     class Fleet
     {
-        public int fleetSize;
+        int fleetSize;
         Random rand;
         List<string> names;
         public List<Robot> robots;
@@ -22,6 +22,8 @@ namespace RobotsVsDinosaurs
 
         public void CreateRobotList()
         {
+            // this currently repeats whatever initial random selection is 
+            // should randomize AFTER
             robots = Enumerable.Repeat(new Robot(names[rand.Next(0, names.Count)], rand.Next(20, 70)), fleetSize).ToList();
         }
 

@@ -10,6 +10,7 @@ namespace RobotsVsDinosaurs
     {
         public int herdSize;
         public List<Dinosaur> dinosaurs;
+        
         public Herd()
         {
             herdSize = 3;
@@ -19,6 +20,7 @@ namespace RobotsVsDinosaurs
         public void CreateDinosaurList()
         {
             dinosaurs = Enumerable.Repeat(new Dinosaur(), herdSize).ToList();
+
         }
     }
 }

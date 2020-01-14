@@ -19,6 +19,8 @@ namespace RobotsVsDinosaurs
             fleet = new Fleet(rand);
             herd = new Herd();
             ChooseSide();
+            DisplayRobots();
+            DisplayDinosaurs();
             RunBattlefield();
         }
         
@@ -57,12 +59,17 @@ namespace RobotsVsDinosaurs
         public void DisplayRobots()
         {
             Console.WriteLine("The Robot Fleet consists of:");
-
+            Console.WriteLine(fleet.robots[0].name + " with a " + fleet.robots[0].powerLevel + " power level and a " + fleet.robots[0].weapon.type + " weapon.");
+            Console.WriteLine(fleet.robots[1].name + " with a " + fleet.robots[1].powerLevel + " power level and a " + fleet.robots[1].weapon.type + " weapon.");
+            Console.WriteLine(fleet.robots[2].name + " with a " + fleet.robots[2].powerLevel + " power level and a " + fleet.robots[2].weapon.type + " weapon.");
         }
 
         public void DisplayDinosaurs()
         {
             Console.WriteLine("The Dinsoaur Herd consists of:");
+            Console.WriteLine(herd.dinosaurs[0].type);
+            Console.WriteLine(herd.dinosaurs[1].type);
+            Console.WriteLine(herd.dinosaurs[2].type);
         }
     }
 }

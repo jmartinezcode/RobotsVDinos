@@ -11,11 +11,8 @@ namespace RobotsVsDinosaurs
         static void Main(string[] args)
         {
             //Random rand = new Random();
-            Battlefield battlefield = new Battlefield();
+            //Battlefield battlefield = new Battlefield();
 
-            //Weapon weapon = new Weapon(rand);
-            //Console.WriteLine("Your weapon is a {0} and has {1} attack power", weapon.type, weapon.attackPower);
-            
             Console.ReadLine();
             
         }
