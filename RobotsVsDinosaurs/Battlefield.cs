@@ -38,7 +38,7 @@ namespace RobotsVsDinosaurs
                         foreach (Robot robot in fleet.robots)
                         {
                             int attack = random.Next(100);
-                            if (robot.health > 0 && attack > 14)
+                            if (robot.health > 0 && attack > 34)
                             {
                                 dinosaur.Attack(robot);
                                 if (robot.health <= 0)
@@ -56,7 +56,8 @@ namespace RobotsVsDinosaurs
                     {
                         foreach (Dinosaur dinosaur in herd.dinosaurs)
                         {
-                            if (dinosaur.health > 0)
+                            int attack = random.Next(100);
+                            if (dinosaur.health > 0 && attack > 4)
                             {
                                 robot.Attack(dinosaur);
                                 if (dinosaur.health <= 0)
