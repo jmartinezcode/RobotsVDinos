@@ -8,14 +8,11 @@ namespace RobotsVsDinosaurs
 {
     class Herd
     {
-        public int herdSize;
-        public List<Dinosaur> dinosaurs;
-        
+        public List<Dinosaur> dinosaurs;        
         public Herd()
         {
-            herdSize = 3;
             //CreateDinosaurList();
-            dinosaurs = new List<Dinosaur>() { new Dinosaur("Anky", 15), new Dinosaur("Raptor", 75), new Dinosaur("Dactyl", 55) };
+            dinosaurs = new List<Dinosaur>() { new Dinosaur("Anky", 20), new Dinosaur("Raptor", 35), new Dinosaur("Dactyl", 25) };
         }
 
         //public void CreateDinosaurList()

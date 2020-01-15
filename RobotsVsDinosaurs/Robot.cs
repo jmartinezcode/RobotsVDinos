@@ -19,7 +19,7 @@ namespace RobotsVsDinosaurs
             // Create random weapon at initialization
             rand = new Random();
             List<string> weaponTypeList = new List<string>() { "Blaster", "Cannon", "Blade", "Rifle", "Ray", "Laser", "Gun", "Sword" };
-            weapon = new Weapon(rand.Next(20,70), weaponTypeList[rand.Next(0, weaponTypeList.Count)]);
+            weapon = new Weapon(rand.Next(35, 45), weaponTypeList[rand.Next(weaponTypeList.Count)]);
         }
 
         public override void Attack(Warrior dinosaur)

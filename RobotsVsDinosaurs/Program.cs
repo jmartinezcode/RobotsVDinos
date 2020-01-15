@@ -12,9 +12,7 @@ namespace RobotsVsDinosaurs
         {
             
             Battlefield battlefield = new Battlefield();
-
-            Console.ReadLine();
-            
+                        
         }
     }
 }
