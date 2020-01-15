@@ -29,7 +29,8 @@ namespace RobotsVsDinosaurs
                       
         public void RunBattlefield()
         {
-            while (true)
+            Random random = new Random();
+            while (deadDinosaurs != herdSize && deadRobots != fleetSize)
             {
                 foreach (Dinosaur dinosaur in herd.dinosaurs)
                 {
@@ -37,7 +38,8 @@ namespace RobotsVsDinosaurs
                     {
                         foreach (Robot robot in fleet.robots)
                         {
-                            if (robot.health > 0)
+                            int attack = random.Next(10); //add 80% random chance
+                            if (robot.health > 0 && attack > 1)
                             {
                                 dinosaur.Attack(robot);
                                 // Console.WriteLine("{0} is attacking {1}",dinosaur.name, robot.name);
@@ -56,6 +58,7 @@ namespace RobotsVsDinosaurs
                     {
                         foreach (Dinosaur dinosaur in herd.dinosaurs)
                         {
+                            //int attack = random.Next(10);  // robots have precision aim, removed chance from robots 
                             if (dinosaur.health > 0)
                             {
                                 robot.Attack(dinosaur);

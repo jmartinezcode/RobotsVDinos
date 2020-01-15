@@ -12,7 +12,7 @@ namespace RobotsVsDinosaurs
         public Herd()
         {
             //CreateDinosaurList();
-            dinosaurs = new List<Dinosaur>() { new Dinosaur("Anky", 20), new Dinosaur("Raptor", 35), new Dinosaur("Dactyl", 25) };
+            dinosaurs = new List<Dinosaur>() { new Dinosaur("Anky", 35), new Dinosaur("Raptor", 55), new Dinosaur("Dactyl", 45) };
         }
 
         //public void CreateDinosaurList()
