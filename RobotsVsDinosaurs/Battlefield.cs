@@ -59,17 +59,17 @@ namespace RobotsVsDinosaurs
         public void DisplayRobots()
         {
             Console.WriteLine("The Robot Fleet consists of:");
-            Console.WriteLine(fleet.robots[0].name + " with a " + fleet.robots[0].powerLevel + " power level and a " + fleet.robots[0].weapon.type + " weapon.");
-            Console.WriteLine(fleet.robots[1].name + " with a " + fleet.robots[1].powerLevel + " power level and a " + fleet.robots[1].weapon.type + " weapon.");
-            Console.WriteLine(fleet.robots[2].name + " with a " + fleet.robots[2].powerLevel + " power level and a " + fleet.robots[2].weapon.type + " weapon.");
+            Console.WriteLine("{0} with a {1} weapon that has {2} attack power", fleet.robots[0].name, fleet.robots[0].weapon.type, fleet.robots[0].weapon.attackPower);
+            Console.WriteLine("{0} with a {1} weapon that has {2} attack power", fleet.robots[1].name, fleet.robots[1].weapon.type, fleet.robots[1].weapon.attackPower);
+            Console.WriteLine("{0} with a {1} weapon that has {2} attack power", fleet.robots[2].name, fleet.robots[2].weapon.type, fleet.robots[2].weapon.attackPower);
         }
 
         public void DisplayDinosaurs()
         {
             Console.WriteLine("The Dinsoaur Herd consists of:");
-            Console.WriteLine(herd.dinosaurs[0].type);
-            Console.WriteLine(herd.dinosaurs[1].type);
-            Console.WriteLine(herd.dinosaurs[2].type);
+            Console.WriteLine(herd.dinosaurs[0].name);
+            Console.WriteLine(herd.dinosaurs[1].name);
+            Console.WriteLine(herd.dinosaurs[2].name);
         }
     }
 }

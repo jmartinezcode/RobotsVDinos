@@ -10,8 +10,8 @@ namespace RobotsVsDinosaurs
     {
         static void Main(string[] args)
         {
-            //Random rand = new Random();
-            //Battlefield battlefield = new Battlefield();
+            
+            Battlefield battlefield = new Battlefield();
 
             Console.ReadLine();
             
