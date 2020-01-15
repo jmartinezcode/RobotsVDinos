@@ -6,37 +6,18 @@ using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
-    class Dinosaur
+    class Dinosaur : Warrior
     {
-        public string type;
-        public double health;
-        public double energy;
-        public double attackPower;
-
-        public Dinosaur()
+        public int attackPower;
+        public Dinosaur(string name, int attackPower)
         {
-            CreateDinosaurType();
-            CreateDinosaurHealth();
-            CreateDinsoaurEnergy();
-            CreateDinosaurAP();
-        }
-
-        public void CreateDinosaurType()
-        {
-            type = "melee";
-        }
-        public void CreateDinosaurHealth()
-        {
-            health = 100;
-        }
-        public void CreateDinsoaurEnergy()
-        {
+            this.name = name;
+            this.attackPower = attackPower;
             energy = 100;
         }
-        public void CreateDinosaurAP()
+        public override void Attack(Warrior robot)
         {
-            attackPower = 100;
+            robot.health -= attackPower;
         }
-
     }
 }

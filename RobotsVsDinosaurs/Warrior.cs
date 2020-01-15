@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
-    class Warrior
+    abstract class Warrior
     {
+        public string name;
+        public int health;
+        public int energy;
+        public Warrior()
+        {
+            health = 100;
+        }
+        public abstract void Attack(Warrior warrior);
+
     }
 }

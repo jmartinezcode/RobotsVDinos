@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
-    class Robot
+    class Robot : Warrior
     {
-        public string name;
-        public double health;
-        public double powerLevel;
         public Weapon weapon;
         Random rand;
 
-        public Robot(string name, double powerLevel)
+        public Robot(string name, int energy)
         {
             this.name = name;
-            health = 100;
-            this.powerLevel = powerLevel;
+            this.energy = energy;
             
-            // Create random weapon at 
+            // Create random weapon at initialization
             rand = new Random();
             List<string> weaponTypeList = new List<string>() { "Blaster", "Cannon", "Blade", "Rifle", "Ray", "Laser", "Gun", "Sword" };
-            weapon = new Weapon(weaponTypeList[rand.Next(0, weaponTypeList.Count)]);
-            //RobotAttack();
+            weapon = new Weapon(rand.Next(20,70), weaponTypeList[rand.Next(0, weaponTypeList.Count)]);
+        }
+
+        public override void Attack(Warrior dinosaur)
+        {
+            dinosaur.health -= weapon.attackPower;
         }
 
         
