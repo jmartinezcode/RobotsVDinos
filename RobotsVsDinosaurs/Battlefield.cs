@@ -26,11 +26,10 @@ namespace RobotsVsDinosaurs
             DisplayDinosaurs();
             RunBattlefield();
         }
-                      
         public void RunBattlefield()
         {
             Random random = new Random();
-            while (deadDinosaurs != herdSize && deadRobots != fleetSize)
+            do
             {
                 foreach (Dinosaur dinosaur in herd.dinosaurs)
                 {
@@ -38,11 +37,10 @@ namespace RobotsVsDinosaurs
                     {
                         foreach (Robot robot in fleet.robots)
                         {
-                            int attack = random.Next(10); //add 80% random chance
-                            if (robot.health > 0 && attack > 1)
+                            int attack = random.Next(100);
+                            if (robot.health > 0 && attack > 14)
                             {
                                 dinosaur.Attack(robot);
-                                // Console.WriteLine("{0} is attacking {1}",dinosaur.name, robot.name);
                                 if (robot.health <= 0)
                                 {
                                     deadRobots++;
@@ -58,11 +56,9 @@ namespace RobotsVsDinosaurs
                     {
                         foreach (Dinosaur dinosaur in herd.dinosaurs)
                         {
-                            //int attack = random.Next(10);  // robots have precision aim, removed chance from robots 
                             if (dinosaur.health > 0)
                             {
                                 robot.Attack(dinosaur);
-                                // Console.WriteLine("{0} is attacking {1}", robot.name, dinosaur.name);
                                 if (dinosaur.health <= 0)
                                 {
                                     deadDinosaurs++;
@@ -74,9 +70,8 @@ namespace RobotsVsDinosaurs
                 }
                 DeclareWinner();
                 break;
-            }
+            } while (true);
         }
-
         public void ChooseSide()
         {
             Console.WriteLine("Choose Your Side (enter 1 or 2):\n1 Robots\n2 Dinosaurs");
@@ -91,16 +86,14 @@ namespace RobotsVsDinosaurs
                     break;
                 default:
                     ChooseSide();
-                    //Console.WriteLine("Please Choose 1 or 2");
                     break;
             }
-        }               
+        }
         public void DisplayRobots()
         {
             Console.WriteLine("The Robot Fleet consists of:");
             Console.WriteLine("{0}, {1}, and {2}. Each has a {3} weapon that has {4} attack power.\n", fleet.robots[0].name, fleet.robots[1].name, fleet.robots[2].name, fleet.robots[0].weapon.type, fleet.robots[0].weapon.attackPower);
         }
-
         public void DisplayDinosaurs()
         {
             Console.WriteLine("The Dinsoaur Herd consists of: \n{0}, {1}, and {2}. \n", herd.dinosaurs[0].name, herd.dinosaurs[1].name, herd.dinosaurs[2].name);
@@ -110,12 +103,20 @@ namespace RobotsVsDinosaurs
             if (deadDinosaurs == herdSize)
             {
                 Console.WriteLine("The Robots were victorious!");
-                Console.ReadLine();         
+                Console.WriteLine("There were {0} survivors", fleetSize - deadRobots);
+                Console.WriteLine("There were {0} dinosaurs killed", deadDinosaurs);
+                Console.ReadLine();
             }
-            else if (deadRobots == fleetSize)
+            else if(deadRobots == fleetSize)
             {
                 Console.WriteLine("The Dinosaurs won!");
+                Console.WriteLine("There were {0} survivors", herdSize - deadDinosaurs);
+                Console.WriteLine("There were {0} robots killed", deadRobots);
                 Console.ReadLine();
+            }
+            else
+            {
+                RunBattlefield();
             }
         }
     }

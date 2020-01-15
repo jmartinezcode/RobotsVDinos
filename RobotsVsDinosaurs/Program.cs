@@ -11,8 +11,11 @@ namespace RobotsVsDinosaurs
         static void Main(string[] args)
         {
 
-            Battlefield battlefield = new Battlefield();
-                    
+            //Battlefield battlefield = new Battlefield();
+            for (int i = 0; i < 5; i++)
+            {
+                Battlefield battlefield = new Battlefield();
+            }
                         
         }
     }
