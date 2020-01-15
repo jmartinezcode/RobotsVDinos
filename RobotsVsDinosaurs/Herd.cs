@@ -14,13 +14,14 @@ namespace RobotsVsDinosaurs
         public Herd()
         {
             herdSize = 3;
-            CreateDinosaurList();
+            //CreateDinosaurList();
+            dinosaurs = new List<Dinosaur>() { new Dinosaur("Anky", 15), new Dinosaur("Raptor", 75), new Dinosaur("Dactyl", 55) };
         }
 
-        public void CreateDinosaurList()
-        {
-            dinosaurs = Enumerable.Repeat(new Dinosaur(), herdSize).ToList();
+        //public void CreateDinosaurList()
+        //{
+        //    // dinosaurs = Enumerable.Repeat(new Dinosaur(), herdSize).ToList();
 
-        }
+        //}
     }
 }
